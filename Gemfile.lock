@@ -1,0 +1,40 @@
+PATH
+  remote: .
+  specs:
+    elders (0.0.0)
+      concurrent-ruby (~> 1.0.0)
+      docker-api (~> 1.26.0)
+      json
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    concurrent-ruby (1.0.0)
+    diff-lcs (1.2.5)
+    docker-api (1.26.0)
+      excon (>= 0.38.0)
+      json
+    excon (0.45.4)
+    json (1.8.3)
+    rspec (3.0.0)
+      rspec-core (~> 3.0.0)
+      rspec-expectations (~> 3.0.0)
+      rspec-mocks (~> 3.0.0)
+    rspec-core (3.0.4)
+      rspec-support (~> 3.0.0)
+    rspec-expectations (3.0.4)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.0.0)
+    rspec-mocks (3.0.4)
+      rspec-support (~> 3.0.0)
+    rspec-support (3.0.4)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  elders!
+  rspec (~> 3.0.0)
+
+BUNDLED WITH
+   1.11.2

@@ -1,0 +1,11 @@
+sudo: required
+
+language: ruby
+rvm:
+  - 2.2.0
+
+services:
+  - docker
+
+script:
+  - bundle exec rspec
