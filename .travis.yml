@@ -7,5 +7,8 @@ rvm:
 services:
   - docker
 
+before_script:
+  - docker pull busybox
+
 script:
   - bundle exec rspec
