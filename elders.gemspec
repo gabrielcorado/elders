@@ -4,8 +4,8 @@ Gem::Specification.new do |s|
   s.name = 'elders'
   s.version = Elders.version
 
-  s.summary = ''
-  s.description = ''
+  s.summary = 'Docker based task runner.'
+  s.description = 'Docker based task runner.'
 
   s.author = 'Gabriel Corado'
   s.email = 'gabrielcorado@mail.com'
@@ -15,11 +15,10 @@ Gem::Specification.new do |s|
   s.executables = Dir["bin/*"].map { |f| File.basename(f) }
 
   # Dependencies
-  s.add_dependency 'concurrent-ruby', '~> 1.0.0'
-  s.add_dependency 'docker-api', '~> 1.26.0'
-  s.add_dependency 'json'
+  s.add_dependency 'concurrent-ruby', '~> 1.0'
+  s.add_dependency 'docker-api', '~> 1.26'
+  s.add_dependency 'json', '~> 1.8'
 
   # Development depencies
-  s.add_development_dependency 'rspec', '~> 3.0.0'
-  # s.add_dependency 'open4', '~> 1.3.4'
+  s.add_development_dependency 'rspec', '~> 3.0'
 end

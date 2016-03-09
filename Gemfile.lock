@@ -2,9 +2,9 @@ PATH
   remote: .
   specs:
     elders (0.0.0)
-      concurrent-ruby (~> 1.0.0)
-      docker-api (~> 1.26.0)
-      json
+      concurrent-ruby (~> 1.0)
+      docker-api (~> 1.26)
+      json (~> 1.8)
 
 GEM
   remote: https://rubygems.org/
@@ -34,7 +34,7 @@ PLATFORMS
 
 DEPENDENCIES
   elders!
-  rspec (~> 3.0.0)
+  rspec (~> 3.0)
 
 BUNDLED WITH
    1.11.2
