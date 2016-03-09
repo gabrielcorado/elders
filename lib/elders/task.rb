@@ -22,7 +22,7 @@ class Elders::Task
   # Start the task
   # Shellwords.escape
   # @param {String} params - Params for the task/command
-  def start(params = nil)
+  def start(params = nil, env = nil)
     # Clean
     clean
 
@@ -31,7 +31,7 @@ class Elders::Task
     command = "#{command} #{params}" unless params.nil?
 
     # Create the container
-    @container = Docker::Container.create 'Image' => @image_name, 'Cmd' => Shellwords.split(command)
+    @container = Docker::Container.create 'Image' => @image_name, 'Cmd' => Shellwords.split(command), 'Env' => env
 
     # Start it
     @container.start
