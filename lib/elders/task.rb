@@ -31,7 +31,10 @@ class Elders::Task
     command = "#{command} #{params}" unless params.nil?
 
     # Create the container
-    @container = Docker::Container.create 'Image' => @image_name, 'Cmd' => Shellwords.split(command), 'Env' => env
+    @container = Docker::Container.create 'Image' => @image_name,
+                                          'Cmd'   => Shellwords.split(command),
+                                          'Env'   => env,
+                                          'Tty'   => true
 
     # Start it
     @container.start
@@ -47,7 +50,7 @@ class Elders::Task
 
   # Task logs
   def logs
-    container.logs stdout: true
+    container.logs stdout: true, stderr: true
   end
 
   # Delete the container
@@ -91,7 +94,7 @@ class Elders::Task
     return nil unless completed?
 
     # Check the task status code
-    @promise.value['StatusCode'] > 0
+    @promise.value['StatusCode'] != 0
   end
 
   # Completed the task?

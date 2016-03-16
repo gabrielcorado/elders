@@ -38,6 +38,22 @@ describe 'Task' do
     expect(@task.logs).to match(/APP_ENV/)
   end
 
+  it 'should get the errors from a task' do
+    # Create a task with error
+    task = Elders::Task.new 'with-error', 'busybox', 'some-non-sense command'
+
+    # Start the task
+    task.start
+
+    # Wait for it run
+    sleep time
+
+    # Assertions
+    expect(task.error?).to eq(true)
+    expect(task.completed?).to eq(true)
+    expect(task.logs.size).to be > 1
+  end
+
   it 'should be deleted' do
     # Start the task
     @task.start
