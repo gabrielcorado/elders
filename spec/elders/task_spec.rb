@@ -4,7 +4,7 @@ require 'spec_helper'
 # Tests
 describe 'Task' do
   # Time to complete the task
-  let(:time) { 0.1 }
+  let(:time) { 1 }
 
   # Create the task before the tests
   before(:all) do
